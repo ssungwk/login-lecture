@@ -1,0 +1,25 @@
+
+git status      
+
+echo "# login-lecture" >> README.md
+git init                            // 해당폴더내 .git 폴더생성.
+
+git add README.md                   // staging area 에 upload.
+git add .                           // 폴더내 모든 파일을 staging area 에 upload.
+
+    git config --global core.autocrlf true      //warning: LF will be replaced by CRLF 관련에러시.
+
+git commit -m "first commit"        // 로컬의 .git 폴더에 저장.
+git branch -M main
+git remote add origin https://github.com/ssungwk/login-lecture.git        // git remote -v 로 원격저장소 연결확인.
+git push -u origin main             // github upload.               // 
+
+    git push origin main  // 확인.
+
+
+
+git clone https://github.com/ssungwk/login-lecture.git login-lecture2       // 폴더지정후 로컬로 가져옴.
+
+rejected시
+동기화 : git pull --rebase origin main
+강제로 : git push origin +main
