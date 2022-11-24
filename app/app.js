@@ -6,10 +6,10 @@ const app = express();
 const PORT = 3000;
 
 // 라우팅의 모든 경로에서 views가 먹힌다.
-app.set("views","./views");                 // 페이지를 뷰해줄 엔진세팅. 앱 세팅
+app.set("views","./src/views");                 // 페이지를 뷰해줄 엔진세팅. 앱 세팅
 app.set("view engine","ejs");               // html 코드를 어떤 엔진으로 해석할지 결정.
 
-const home = require("./routes/home/index");      
+const home = require("./src/routes/home/index");      
 // "/"루트로 들어오면 home으로 보낸다.
 // 결국 ./routes/home 폴더에 있는 JS파일을 읽어와줘.
 app.use("/", home);  // use는 미들웨어를 등록하는 메서드.
