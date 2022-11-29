@@ -22,7 +22,7 @@ app.use("/", home);  // use는 미들웨어를 등록하는 메서드.
 //     console.log("서버가동");
 // })
 
-module.exports = app;       //www.js 파일에서 실행하기 위해 내보내줌.
+module.exports = app;       //www.js 파일에서 실행하기 위해 내보내줌. 
 
 // 동일한 스크립트
 // app.listen(3000, function(){

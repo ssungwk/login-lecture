@@ -23,3 +23,6 @@ git clone https://github.com/ssungwk/login-lecture.git login-lecture2       // �
 rejected시
 동기화 : git pull origin main
 강제로 : git push origin +main
+
+npm install nodemon -g
+sudo npm i nodemon -g   // 권한에 걸렸을때
