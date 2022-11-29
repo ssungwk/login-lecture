@@ -9,6 +9,8 @@ const PORT = 3000;
 app.set("views","./src/views");                 // 페이지를 뷰해줄 엔진세팅. 앱 세팅
 app.set("view engine","ejs");               // html 코드를 어떤 엔진으로 해석할지 결정.
 
+app.use(express.static(`${__dirname}/src/public`)); //정적경로로 지정해줌.  // "__dirname" 는 app.js 파일이 있는 경로.
+
 const home = require("./src/routes/home/index");      
 // "/"루트로 들어오면 home으로 보낸다.
 // 결국 ./routes/home 폴더에 있는 JS파일을 읽어와줘.
@@ -38,3 +40,4 @@ module.exports = app;       //www.js 파일에서 실행하기 위해 내보내�
 // npm install (npm i) 만해도 package.json 파일의 dependencies의 프로그램을 재설치해줌.
 // package.json에서 start를 설정해주면 node ./bin/www.js -> npm start 로 서버를 실행할수있음.
 
+// killall -9 node
