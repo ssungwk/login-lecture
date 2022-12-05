@@ -21,7 +21,7 @@ const process = {
               pwd = req.body.pwd;
         
         if (users.id.includes(id)){
-            const idx = users.id.IndexOf(id);
+            const idx = users.id.indexOf(id);
             if (users.pwd[idx] === pwd) {
                 return res.json({
                     success: true,
