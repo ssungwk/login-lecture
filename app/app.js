@@ -3,6 +3,8 @@
 const express = require("express");
 const app = express();
 
+const bodyParser = require("body-parser");
+
 //const PORT = 3000;
 
 // 라우팅의 모든 경로에서 "views"가 먹힌다.
@@ -10,6 +12,10 @@ app.set("views","./src/views");                 // 페이지를 뷰해줄 엔진
 app.set("view engine","ejs");               // html 코드를 어떤 엔진으로 해석할지 결정.
 
 app.use(express.static(`${__dirname}/src/public`)); //정적경로로 지정해줌.  // "__dirname" 는 app.js 파일이 있는 경로.
+
+app.use(bodyParser.json());
+// URL을 통해 전달되는 데이터에 한글, 공백등과 같은 문자가 포함될 결ㅇ우 제대로 인식되지 않는 문제 해결
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const home = require("./src/routes/home");      
 // "/"루트로 들어오면 home으로 보낸다.

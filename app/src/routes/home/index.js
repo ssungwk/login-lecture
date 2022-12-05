@@ -14,8 +14,10 @@ const ctrl = require("./home.ctrl");    //
 // router.get("/login", (req, res) => {
 //     res.render("home/login");
 // })
-router.get("/", ctrl.hello)
-router.get("/login", ctrl.login)
+router.get("/", ctrl.output.hello)
+router.get("/login", ctrl.output.login)
+
+router.post("/login", ctrl.process.login)
 
 // index.js를 외부 파일에서 사용할수있게 해준다. 
 // app.js 파일에 사용가능하게 내보내주는 기능. app.use()메서드로 받아감.
